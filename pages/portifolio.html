@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/estilo.css">
+    <title>NeonArena | Portfólio</title>
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" id="logo">NEON<span>ARENA</span></a>
+        <button id="menu-hamburguer" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Portfólio</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <button id="carrinho-btn" aria-label="Abrir carrinho">
+            <img src="../src/assets/shopping-cart.svg" alt="Carrinho" class="icon-btn"> <span id="carrinho-count">0</span>
+        </button>
+    </header>
+
+    <section class="page-hero">
+        <p style="font-family:'Orbitron',monospace; font-size:0.65rem; letter-spacing:0.3em; color:#9583B6; margin-bottom:0.75rem;">// CATÁLOGO COMPLETO</p>
+        <h1>Nossos <em>Produtos</em></h1>
+        <p>Hardware, periféricos e acessórios para o seu setup</p>
+    </section>
+
+    <main>
+        <div id="container">
+
+            <section>
+                <h2 class="titulo-secao">Mais <em>Vendidos</em></h2>
+                <div class="titulo-linha"></div>
+
+                <div class="servicos-grid">
+                    <div class="servico-card">
+                        <img src="../src/assets/mouse.svg" alt="Mouse Pro X9" class="servico-img"/>
+                        <h3>MOUSE PRO X9</h3>
+                        <p>DPI ajustável 200–16000. Sensor óptico, 6 botões programáveis. Ideal para FPS.</p>
+                        <span class="servico-preco">R$ 289,90</span>
+                        <button class="btn-adicionar" onclick="adicionarItem('Mouse Pro X9', 289.90, '🖱️')">+ Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="servico-card">
+                        <img src="../src/assets/teclado.svg" alt="Teclado Mech RGB" class="servico-img"/>
+                        <h3>TECLADO MECH RGB</h3>
+                        <p>Switch tactile, iluminação RGB por tecla, anti-ghosting 100%, NKRO completo.</p>
+                        <span class="servico-preco">R$ 459,00</span>
+                        <button class="btn-adicionar" onclick="adicionarItem('Teclado Mech RGB', 459.00, '⌨️')">+ Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="servico-card">
+                        <img src="../src/assets/headset.svg" alt="Headset Surround 7.1" class="servico-img"/>
+                        <h3>HEADSET SURROUND 7.1</h3>
+                        <p>Áudio surround virtual, mic cardioid destacável, almofadas memory foam.</p>
+                        <span class="servico-preco">R$ 379,90</span>
+                        <button class="btn-adicionar" onclick="adicionarItem('Headset Surround 7.1', 379.90, '🎧')">+ Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="servico-card">
+                        <img src="../src/assets/monitor.svg" alt="Monitor 27 165Hz" class="servico-img"/>
+                        <h3>MONITOR 27" 165HZ</h3>
+                        <p>IPS QHD 2560×1440, 1ms, FreeSync Premium, HDR400. Para FPS e RPG.</p>
+                        <span class="servico-preco">R$ 1.899,00</span>
+                        <button class="btn-adicionar" onclick="adicionarItem('Monitor 27 165Hz', 1899.00, '📺')">+ Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="servico-card">
+                        <img src="../src/assets/cadeira.svg" alt="Cadeira Gamer Pro" class="servico-img"/>
+                        <h3>CADEIRA GAMER PRO</h3>
+                        <p>Encosto reclinável 180°, apoio lombar ajustável, braços 4D. Até 150kg.</p>
+                        <span class="servico-preco">R$ 1.290,00</span>
+                        <button class="btn-adicionar" onclick="adicionarItem('Cadeira Gamer Pro', 1290.00, '🪑')">+ Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="servico-card">
+                        <img src="../src/assets/rgb.svg" alt="Kit RGB Completo" class="servico-img"/>
+                        <h3>KIT RGB COMPLETO</h3>
+                        <p>Fitas LED, controlador ARGB, extensão para gabinete. Sync com placa-mãe.</p>
+                        <span class="servico-preco">R$ 199,90</span>
+                        <button class="btn-adicionar" onclick="adicionarItem('Kit RGB Completo', 199.90, '💡')">+ Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="precos-section">
+                <h2 class="titulo-secao">Promoções <em>da Semana</em></h2>
+                <p class="subtitulo-secao">Kits especiais com desconto progressivo. Estoque limitado!</p>
+
+                <div class="precos-grid">
+                    <div class="plano-card">
+                        <div class="plano-header">
+                            <img src="../src/assets/mouse.svg" alt="" class="plano-icon-img">
+                            <h3>KIT STARTER</h3>
+                            <p>Mouse + Mousepad XL</p>
+                        </div>
+                        <div class="plano-preco">
+                            <span class="preco-moeda">R$</span>
+                            <span class="preco-valor">349</span>
+                            <span class="preco-periodo">/kit</span>
+                        </div>
+                        <button class="btn-plano" onclick="window.location.href='./contato.html'">Quero esse kit</button>
+                    </div>
+
+                    <div class="plano-card plano-destaque">
+                        <div class="plano-popular">
+                            <img src="../src/assets/star.svg" alt="" class="icon-inline"> Mais Popular
+                        </div>
+                        <div class="plano-header">
+                            <img src="../src/assets/hero-setup.svg" alt="" class="plano-icon-img">
+                            <h3>KIT GAMER</h3>
+                            <p>Mouse + Teclado + Headset</p>
+                        </div>
+                        <div class="plano-preco">
+                            <span class="preco-moeda">R$</span>
+                            <span class="preco-valor">899</span>
+                            <span class="preco-periodo">/kit</span>
+                        </div>
+                        <button class="btn-plano btn-plano-destaque" onclick="window.location.href='./contato.html'">Quero esse kit</button>
+                    </div>
+
+                    <div class="plano-card">
+                        <div class="plano-header">
+                            <img src="../src/assets/trophy.svg" alt="" class="plano-icon-img">
+                            <h3>KIT SETUP COMPLETO</h3>
+                            <p>Mouse + Teclado + Headset + Monitor</p>
+                        </div>
+                        <div class="plano-preco">
+                            <span class="preco-moeda">R$</span>
+                            <span class="preco-valor">2.499</span>
+                            <span class="preco-periodo">/kit</span>
+                        </div>
+                        <button class="btn-plano" onclick="window.location.href='./contato.html'">Quero esse kit</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="../src/js/script.js"></script>
+</body>
+</html>
