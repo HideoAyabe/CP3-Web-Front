@@ -220,6 +220,22 @@ header nav ul li a.active {
     transform: translateY(-2px);
 }
 
+/* Hero entrance animations */
+@keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge     { animation: heroFadeUp 0.6s ease both 0.2s; }
+.hero-content h1{ animation: heroFadeUp 0.6s ease both 0.4s; }
+.hero-content p { animation: heroFadeUp 0.6s ease both 0.6s; }
+.hero-botoes    { animation: heroFadeUp 0.6s ease both 0.8s; }
+.hero-img       { animation: heroFadeUp 0.8s ease both 0.3s; }
+
+.hero-img img {
+    transition: transform 0.15s ease;
+}
+
 /* ── CONTAINER ── */
 #container {
     padding: 60px 8%;
